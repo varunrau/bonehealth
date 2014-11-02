@@ -3,6 +3,10 @@ body, html {
   margin: 0;
   height: 100%;
   color: #333;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none;
 }
 
 input:focus,
@@ -499,9 +503,5 @@ input.cmn-toggle-round:checked ~ .no {
   display: inline-block;
   padding: 10px;
   cursor: pointer;
-  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-  -moz-user-select: none; /* mozilla browsers */
-  -khtml-user-select: none; /* webkit (konqueror) browsers */
-  -ms-user-select: none;
 }
 

@@ -60,7 +60,7 @@
             <img class="box-img" src="broccoli.svg">
             <div class="number" id="dairy">
               <img class="up-arrow" src="arrow.svg">
-              <input type="number" id="dairyNumber" class="middle-num" value="0">
+              <input type="number" id="dairyNumber" class="middle-num no-negative" value="0">
               <img class="down-arrow" src="arrow.svg">
             </div>
           </div>
@@ -71,7 +71,7 @@
             <img class="box-img" src="broccoli.svg">
             <div class="number" id="desserts">
               <img class="up-arrow" src="arrow.svg">
-              <input type="number" id="dessertsNumber" class="middle-num" value="0">
+              <input type="number" id="dessertsNumber" class="middle-num no-negative" value="0">
               <img class="down-arrow" src="arrow.svg">
             </div>
           </div>
@@ -82,7 +82,7 @@
             <img class="box-img" src="broccoli.svg">
             <div class="number" id="vegetables">
               <img class="up-arrow" src="arrow.svg">
-              <input type="number" id="vegetablesNumber" class="middle-num" value="0">
+              <input type="number" id="vegetablesNumber" class="middle-num no-negative" value="0">
               <img class="down-arrow" src="arrow.svg">
             </div>
           </div>
@@ -93,7 +93,7 @@
             <img class="box-img" src="broccoli.svg">
             <div class="number" id="fish">
               <img class="up-arrow" src="arrow.svg">
-              <input type="number" id="fishNumber" class="middle-num" value="0">
+              <input type="number" id="fishNumber" class="middle-num no-negative" value="0">
               <img class="down-arrow" src="arrow.svg">
             </div>
           </div>
@@ -104,7 +104,7 @@
             <img class="box-img" src="broccoli.svg">
             <div class="number" id="cheese">
               <img class="up-arrow" src="arrow.svg">
-              <input type="number" id="cheeseNumber" class="middle-num" value="0">
+              <input type="number" id="cheeseNumber" class="middle-num no-negative" value="0">
               <img class="down-arrow" src="arrow.svg">
             </div>
           </div>
@@ -115,7 +115,7 @@
             <img class="box-img" src="broccoli.svg">
             <div class="number" id="CAFortifiedD">
               <img class="up-arrow" src="arrow.svg">
-              <input type="number" id="CAFortifiedDNumber" class="middle-num" value="0">
+              <input type="number" id="CAFortifiedDNumber" class="middle-num no-negative" value="0">
               <img class="down-arrow" src="arrow.svg">
             </div>
           </div>
