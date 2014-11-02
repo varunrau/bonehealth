@@ -1,10 +1,11 @@
 
 from sys import argv
-from bottle import route, run, template, get
+from bottle import route, run, template, get, view, static_file
 
 @route('/')
+@view("main")
 def index():
-    return "Hi, Varun!"
+    return {}
 
 @get("/<filename:re:.*\.js>")
 def javascripts(filename):
