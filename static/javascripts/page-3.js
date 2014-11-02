@@ -22,12 +22,24 @@ function setPage3() {
   $('.maximum-calcium').html(Math.abs(excess));
 }
 
+var mapFood = {
+  'dairy': 'DAIRY',
+  'desserts': 'DAIRY',
+  'vegetables': 'VEGGIES',
+  'fish': 'FISH',
+  'cheese': "CHEESE",
+  'CAFortifiedD': 'JUICE'
+};
+
 function setRecommendedMin() {
   $('#bleh').show();
   $('#woo').hide();
   $('#too-much').hide();
   var minElement = getMinElement();
-  var minElementPicture = minElement + "3.svg";
+  if (minElement == 'desserts') minElement = 'dairy';
+  var minElementPicture = minElement + "1.svg";
+  $('.sum-img').attr('src', minElementPicture);
+  $('.sum-img-h').html(mapFood[minElement]);
 }
 
 function getMinElement() {
@@ -43,12 +55,16 @@ function getMinElement() {
   return minElement;
 }
 
+
 function setRecommendedMax() {
   $('#bleh').hide();
   $('#woo').hide();
   $('#too-much').show();
   var maxElement = getMaxElement();
-  var maxElementPicture = maxElement + "3.svg";
+  var maxElementPicture = maxElement + "1.svg";
+  console.log(maxElementPicture);
+  $('.sum-img').attr('src', maxElementPicture);
+  $('.sum-img-h').html(mapFood[maxElement]);
 }
 
 function getMaxElement() {
