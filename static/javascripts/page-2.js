@@ -1,7 +1,3 @@
-
-// Categories
-var servings = Object.keys(user.servings);
-
 $(document).ready(function() {
 
   $('.up-arrow').click(function() {
@@ -48,6 +44,11 @@ $(document).ready(function() {
     }
   });
 
+  $('#tip-bubble').click(function() {
+    var tip = generatePlea();
+    $(this).children('#bubble-text').html(tip);
+  });
+
   // Set cookies
   $('#continue-page-2').click(function() {
     // Grab values and set cookies
@@ -68,6 +69,17 @@ $(document).ready(function() {
   repopulatePage2()
 });
 
+function generatePlea() {
+  var pleas = ["I ate five ice creams today!",
+               "Don't click here, click there!",
+               "Calcium is bone-tiful in foods!",
+               "Please let me know...please?",
+               "I'm here to help you!",
+               "Don't make me come over there!"];
+  var random = Math.floor(Math.random() * pleas.length);
+  return pleas[random];
+}
+
 function repopulatePage2() {
   for (serving in servings) {
     var ingredient = servings[serving];
@@ -75,5 +87,6 @@ function repopulatePage2() {
     if (oldServing) { $("#" + ingredient + "Number").val(oldServing); }
   }
 }
+
 
 
