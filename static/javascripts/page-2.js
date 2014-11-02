@@ -5,18 +5,21 @@ var servings = Object.keys(user.servings);
 $(document).ready(function() {
 
   $('.up-arrow').click(function() {
-    console.log('whatsupdog');
+    var categoryName = $(this).parent().attr('id');
     var category = '#' + $(this).parent().attr('id') + 'Number';
     var currentNum = +$(category).val();
     $(category).val(currentNum + 1);
+    setImage(categoryName, currentNum);
   });
 
   $('.down-arrow').click(function() {
+    var categoryName = $(this).parent().attr('id');
     var category = '#' + $(this).parent().attr('id') + 'Number';
     var currentNum = +$(category).val();
     if (currentNum > 0) {
       $(category).val(currentNum - 1);
     }
+    setImage(categoryName, currentNum);
   });
 
   // Set cookies
@@ -37,6 +40,11 @@ $(document).ready(function() {
   repopulatePage2()
 });
 
+// Updates the image
+function setImage(category, numServings) {
+  console.log(category);
+}
+
 function repopulatePage2() {
   for (serving in servings) {
     var ingredient = servings[serving];
@@ -44,4 +52,5 @@ function repopulatePage2() {
     if (oldServing) { $("#" + ingredient + "Number").val(oldServing); }
   }
 }
+
 
