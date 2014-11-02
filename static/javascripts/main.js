@@ -53,12 +53,33 @@ var pregnantBounds = {
   }
 }
 var servingSizes = {
-  'milk'        : 1,
-  'yogurt'      : 1,
-  'cheese'      : 1,
-  'tofu'        : 4,
-  'vegetables'  : 0.5,
-  'sardines'    : 3
+  'dairy'        : 1,
+  'desserts'     : 0.5,
+  'vegetables'   : 0.5,
+  'fish'         : 3,
+  'cheesy foods' : 1,
+  'CAFortifiedD' : 1
+  // 'milk'        : 1,
+  // 'yogurt'      : 1,
+  // 'cheese'      : 1.5,
+  // 'tofu'        : 4,
+  // 'vegetables'  : 0.5,
+  // 'fish'        : 3
+}
+
+var servingCalciums = {
+  'dairy'        : 325,
+  'desserts'     : 58,
+  'vegetables'   : 52,
+  'fish'         : 388,
+  'cheese'       : 260,
+  'CAFortifiedD' : 240
+  // 'milk'        : 275,
+  // 'yogurt'      : 375,
+  // 'cheese'      : 1,
+  // 'tofu'        : 375,
+  // 'vegetables'  : 52,
+  // 'fish'        : 38
 }
 
 function User(age, pregnant, gender) {
@@ -66,12 +87,12 @@ function User(age, pregnant, gender) {
   this.pregnant = pregnant;
   this.gender = gender; // true for w
   this.servings = {
-    'milk'        : 0,
-    'yogurt'      : 0,
-    'cheese'      : 0,
-    'tofu'        : 0,
-    'vegetables'  : 0,
-    'sardines'    : 0
+    'dairy'        : 325,
+    'desserts'     : 58,
+    'vegetables'   : 52,
+    'fish'         : 388,
+    'cheese'       : 260,
+    'CAFortifiedD' : 240
   }
   this.totalServingSize = 0;
   this.group = {
@@ -82,7 +103,8 @@ function User(age, pregnant, gender) {
   this.calcTotalServingSize = function() {
     totalServingSize = 0;
     for (var serving in this.servings) {
-      totalServingSize += serving / servingSizes[serving];
+      portion = serving / servingSizes[serving];
+      totalServingSize += porition * servingCalciums[serving];
     }
     return totalServingSize;
   }
