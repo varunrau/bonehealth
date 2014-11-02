@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="calculator.js"></script>
   <script src="cookies.js"></script>
+  <script src="humerus.js"></script>
   <script src="main.js"></script>
   <script src="page-1.js"></script>
   <script src="page-3.js"></script>

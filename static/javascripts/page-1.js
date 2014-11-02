@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
   // Repopulation
+  $("#lame-pun").innerHTML = generateHumerusPuns();
   repopulatePage1();
 });
 
