@@ -15,7 +15,6 @@ $(document).ready(function() {
       currentNum += 1;
       $(category).val(currentNum);
     }
-    console.log(categoryName);
     setImage(categoryName, currentNum);
   });
 
@@ -56,7 +55,7 @@ $(document).ready(function() {
       var category = servings[serving];
       var servingValue = $('#' + category + 'Number').val();
       if (Cookies.enabled) {
-        Cookies.set(ingredient, servingValue);
+        Cookies.set(category, servingValue);
         Cookies.set(PAGE, 3);
         Cookies.set(category, servingValue);
       }
