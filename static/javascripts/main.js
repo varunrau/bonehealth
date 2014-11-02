@@ -147,6 +147,13 @@ function User(age, pregnant, gender) {
 var AGE = 'age';
 var PREGNANT = 'pregnant?';
 var GENDER = 'gender';
+// var DAIRY = 'dairy';
+// var DESSERTS = 'desserts';
+// var VEGETABLES = 'vegetables';
+// var FISH = 'fish';
+// var CHEESE = 'cheese';
+// var CAFORTIFIEDD = 'CAFortifiedD';
+
 
 var user = new User();
 
@@ -162,3 +169,21 @@ function setSection(to, from) {
   }
 }
 
+function restoreUser() {
+  if (Cookies.enabled) {
+    oldAge = Cookies.get(AGE);
+    oldPreg = Cookies.get(PREGNANT) == "false" ? false : true;
+    oldGender = Cookies.get(GENDER) == "false" ? false : true;
+
+    if (oldAge) user.age = oldAge;
+    if (oldPreg) user.pregnant = oldPreg;
+    if (oldGender) user.gender = oldGender;
+
+    for (serving in user.servings) {
+      var amount = Cookies.get(serving)
+      user.servings[serving] = isNaN(amount) ? 0 : amount;
+    }
+  }
+}
+
+$(document).ready(restoreUser());
