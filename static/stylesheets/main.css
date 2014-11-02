@@ -62,7 +62,7 @@ h1, h2, h3, p {
 #joke {
   box-sizing: border-box;
   text-align: center;
-  right: 50%;
+  left: 50%;
   top: 50px;
   overflow: hidden;
   position: absolute;
@@ -71,7 +71,7 @@ h1, h2, h3, p {
   height: 200px;
   padding: 32px;
   padding-top: 0;
-  margin-right: 350px;
+  margin-left: -650px;
   background: #0088cc;
   color: #fff;
   border-radius: 15px;
