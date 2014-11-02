@@ -48,9 +48,9 @@
     </section>
 
     <!-- Page 2 -->
-    <section id="two">
+        <section id="two">
       <div id="box-container">
-        <div class="box-wrapper">
+        <div class="box-wrapper left">
           <h2 class="box-header">General Dairy <span class="light-blue">(Cups)</span> </h2>
           <div class="box">
             <img class="box-img" src="broccoli.svg">
@@ -61,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="box-wrapper">
+        <div class="box-wrapper middle">
           <h2 class="box-header">Frozen Desserts <span class="light-blue">(Servings)</span> </h2>
           <div class="box">
             <img class="box-img" src="broccoli.svg">
@@ -72,7 +72,7 @@
             </div>
           </div>
         </div>
-        <div class="box-wrapper">
+        <div class="box-wrapper right">
           <h2 class="box-header">Vegetables <span class="light-blue">(Cups)</span> </h2>
           <div class="box">
             <img class="box-img" src="broccoli.svg">
@@ -83,7 +83,7 @@
             </div>
           </div>
         </div>
-        <div class="box-wrapper">
+        <div class="box-wrapper left">
           <h2 class="box-header">Fish and Nuts <span class="light-blue">(Ounces)</span> </h2>
           <div class="box">
             <img class="box-img" src="broccoli.svg">
@@ -94,7 +94,7 @@
             </div>
           </div>
         </div>
-        <div class="box-wrapper">
+        <div class="box-wrapper middle">
           <h2 class="box-header">Cheese Entrees <span class="light-blue">(Pieces)</span> </h2>
           <div class="box">
             <img class="box-img" src="broccoli.svg">
@@ -105,7 +105,7 @@
             </div>
           </div>
         </div>
-        <div class="box-wrapper">
+        <div class="box-wrapper right">
           <h2 class="box-header">Fortified Drinks <span class="light-blue">(Cups)</span> </h2>
           <div class="box">
             <img class="box-img" src="broccoli.svg">
@@ -120,6 +120,7 @@
       <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> BACK </div>
       <div class="next next-float" onclick="setSection($('#three'), $('.active'));"> SUBMIT </div>
     </section>
+
     <!-- Third page -->
     <section id="three">
     </section>

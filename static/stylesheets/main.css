@@ -54,14 +54,21 @@ h1, h2, h3, p {
   padding: 15px;
   width: 250px;
   font-size: 36px;
-  background: #0077c0;
+  background: #0088cc;
   margin: auto;
   font-weight: 700;
   font-family: Squada One, sans-serif;
-  color: #53beeb;
+  color: #fff;
   border-radius: 15px;
-  transition: 1s;
-  -webkit-transition: 1s;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.next:hover {
+  background: #0077c0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .next-float {
@@ -72,7 +79,6 @@ h1, h2, h3, p {
 
 .next:hover {
   cursor: pointer;
-  color: #fff;
 }
 
 #machine {
@@ -80,6 +86,7 @@ h1, h2, h3, p {
 }
 
 h1 {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   font-size: 80px;
   color: #fff;
   font-weight: 700;
@@ -91,8 +98,9 @@ h1 {
 }
 
 .content {
+  padding: 2px;
   height: 200px;
-  width: 800px;
+  width: 720px;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -105,6 +113,7 @@ p {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 input[type="number"], select {
@@ -117,12 +126,17 @@ input[type="number"], select {
   font-family: Squada One, sans-serif;
   font-size: 80px;
   border: none;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 select {
   text-align: center;
   width: 28%;
   -webkit-appearance: none;
+}
+
+select:hover, input[type="number"]:hover {
+  cursor: pointer;
 }
 
 .switch {
@@ -138,6 +152,7 @@ select {
   visibility: hidden;
 }
 .cmn-toggle + label {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   display: block;
   position: relative;
   cursor: pointer;
@@ -145,6 +160,7 @@ select {
   user-select: none;
 }
 input.cmn-toggle-round + label {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
   top: -55px;
@@ -191,22 +207,23 @@ input[type=number]::-webkit-outer-spin-button {
   float: left;
   width: 200px;
   height: 200px;
-  .margin-right: 50px;
-  margin-left: 50px;
-  background: #0077c0;
+  margin-left: 30px;
+  background: #0088cc;
   border-radius: 100px;
-  opacity: 0.5;
-  transition: 1s;
-  -webkit-transition: 1s;
+  position: relative;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.wrapper:hover {
+  background: #0077c0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .section-header {
   position: relative;
   top: 15px;
-}
-
-.wrapper:hover {
-  opacity: 1;
 }
 
 #box-container {
@@ -219,13 +236,31 @@ input[type=number]::-webkit-outer-spin-button {
 .box-wrapper {
   box-sizing: border-box;
   padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
   float: left;
-  width: 33%;
+  width: 26%;
   height: 50%;
+}
+
+.left {
+  margin-left: 11%;
+  padding-right: 0px;
+}
+
+.middle {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.right {
+  padding-left: 0px;
+  margin-right: 11%;
 }
 
 .box-header {
   position: relative;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   top: -7px;
   height: 10%;
   width: 100%;
@@ -243,18 +278,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number {
-  float: left;
+  float: right;
   width: 33%;
   height: 100%;
   border-radius: 15px;
-  background: #0077c0;
-  opacity: 0.5;
-  transition: 1s;
-  -webkit-transition: 1s;
+  background: #0088cc;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
 
 .number:hover {
-  opacity: 1;
+  background: #0077c0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .middle-num {
@@ -292,8 +328,9 @@ input[type=number]::-webkit-outer-spin-button {
   color: #53beeb;
   font-family: Squada One, sans-serif;
   opacity: 0;
-  transition: 1s;
-  -webkit-transition: 1s;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .no {
@@ -312,6 +349,61 @@ input.cmn-toggle-round:checked ~ .yes {
 
 input.cmn-toggle-round:checked ~ .no {
   opacity: 0;
+}
+
+@media (max-width: 1400px) {
+  #machine {
+    width: 360px;
+  }
+
+  .wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .middle-num {
+    font-size: 48px !important;
+  }
+
+  .box-header {
+    font-size: 18px;
+  }
+
+  .next-float {
+    margin-top: -5px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #machine {
+    display: none;
+  }
+
+  .wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    margin-top: 30px;
+    font-size: 64px;
+  }
+
+  .middle-num {
+    font-size: 36px !important;
+  }
+
+  .box-header {
+    font-size: 14px;
+  }
+
+  .next-float {
+    margin-top: -20px;
+  }
 }
 
 .gender-input {
