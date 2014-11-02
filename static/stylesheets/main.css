@@ -572,6 +572,27 @@ input.cmn-toggle-round:checked ~ .no {
   width: 100px;
 }
 
+.sum-img-h {
+  display: block;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sum-img {
+  float: right;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.food {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
 @media (min-height: 750px) {
   #one {
     padding-top: 50px;
@@ -668,6 +689,12 @@ input.cmn-toggle-round:checked ~ .no {
 
   .sum-text {
     margin-top: 0;
+  }
+
+  .sum-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
   }
 }
 
