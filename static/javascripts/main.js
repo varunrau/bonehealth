@@ -106,8 +106,7 @@ function User(age, pregnant, gender) {
   this.calcTotalServingSize = function() {
     totalServingSize = 0;
     for (var serving in this.servings) {
-      console.log(servingSizes[serving]);
-      portion = serving / servingSizes[serving];
+      portion = this.servings[serving] / servingSizes[serving];
       totalServingSize += portion * servingCalciums[serving];
     }
     return totalServingSize;
