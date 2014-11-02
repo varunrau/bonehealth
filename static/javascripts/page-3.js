@@ -25,7 +25,7 @@ function setPage3() {
 var mapFood = {
   'dairy': 'DAIRY',
   'desserts': 'DAIRY',
-  'vegetables': 'VEGGIES',
+  'vegetables': 'VEGGIE',
   'fish': 'FISH',
   'cheese': "CHEESE",
   'CAFortifiedD': 'JUICE'

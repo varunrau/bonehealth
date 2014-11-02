@@ -577,6 +577,7 @@ input.cmn-toggle-round:checked ~ .no {
   float: right;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 75px;
 }
 
 .sum-img {

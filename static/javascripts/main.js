@@ -9,7 +9,7 @@ var adultsBounds = {
     'lower' : 1000,
     'upper' : 2000
   },
-  'WOMEN: 51-70' : {
+  'WOMEN 51-70' : {
     'lower' : 1200,
     'upper' : 2000
   },
@@ -115,20 +115,21 @@ function User(age, pregnant, gender) {
   this.findGroup = function() {
     // Determine age group
     if (pregnant) {
+      console.log('prgeers');
       if (age <= 18) {
         return pregnantBounds['14-18'];
       } else {
         return pregnantBounds['19-50+'];
       }
     }
-    if (age <= 18) {
-      if (age <= 1) {
+    if (this.age <= 18) {
+      if (this.age <= 1) {
         return kidsBounds['infants'];
-      } else if (age <= 3) {
+      } else if (this.age <= 3) {
         return kidsBounds['1-3'];
-      } else if (age <= 8) {
+      } else if (this.age <= 8) {
         return kidsBounds['4-8'];
-      } else if (age <= 18) {
+      } else if (this.age <= 18) {
         return kidsBounds['9-18'];
       }
     } else {
@@ -172,16 +173,16 @@ function setSection(to, from) {
 
 function restoreUser() {
   if (Cookies.enabled) {
-    oldAge = Cookies.get(AGE);
+    oldAge = +Cookies.get(AGE);
     oldPreg = Cookies.get(PREGNANT);
     oldGender = Cookies.get(GENDER);
     oldPage = +Cookies.get(PAGE);
 
-    if (oldAge) user.age = oldAge == "false" ? false : true;;
+    if (oldAge) user.age = oldAge;
     if (oldPreg) user.pregnant = oldPreg == "false" ? false : true;
     if (oldGender) {
       if (oldGender == "false") disablePregnancy();
-      user.gender = oldGender;
+      user.gender = oldGender == "false" ? false : true;
     }
 
     for (serving in user.servings) {
