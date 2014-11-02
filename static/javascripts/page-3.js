@@ -14,10 +14,21 @@ function setPage3() {
   lack = total - lower;
   excess = upper - total;
 
-  $('#total-calcium').html(total);
-  if (lack < 0) { $('#above').html("below"); }
-  $('#minimum-calcium').html(Math.abs(lack));
-  if (excess < 0) { $('#below').html("above"); }
-  $('#maximum-calcium').html(Math.abs(excess));
+  $('.total-calcium').html(total);
+  if (lack < 0) {
+    $('#bleh').show();
+    $('#woo').hide();
+    $('#too-much').hide();
+  } else if (excess < 0) {
+    $('#bleh').hide();
+    $('#woo').hide();
+    $('#too-much').show();
+  } else {
+    $('#bleh').hide();
+    $('#woo').show();
+    $('#too-much').hide();
+  }
+  $('.minimum-calcium').html(Math.abs(lack));
+  $('.maximum-calcium').html(Math.abs(excess));
 }
 

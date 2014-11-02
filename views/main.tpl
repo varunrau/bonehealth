@@ -128,7 +128,7 @@
     <!-- Third page -->
     <section id="three">
       <div id="sum-container">
-        <div id="woo" style="display: none;">
+        <div id="woo">
           <div class="sum-result">
             <img class="main-img" src="too-perfect.svg">
             <p class="sum-text"> Looks like your calcium intake is at normal and healthy levels. Keep up the good work! </p>
@@ -136,12 +136,12 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
-              <h1> <span id="total-calcium">0</span> MG </h1>
+              <h1> <span class="total-calcium">0</span> MG </h1>
               <p class="no-margin"> of calcium today! </p>
               <br><br>
-              <h1 class="ok"> <span id="minimum-calcium">0</span> MG </h1>
+              <h1 class="ok"> <span class="minimum-calcium">0</span> MG </h1>
               <p class="no-margin"> above your mininum. </p>
-              <h1 class="ok"> <span id="maximum-calcium">0</span> MG </h1>
+              <h1 class="ok"> <span class="maximum-calcium">0</span> MG </h1>
               <p class="no-margin"> below your max. </p>
             </div>
           </div>
@@ -154,14 +154,14 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
-              <h1> <span id="total-calcium">0</span> MG </h1>
+              <h1> <span class="total-calcium">0</span> MG </h1>
               <p class="no-margin"> of Calcium today! </p>
-              <h1 class="ok"> <span id="minimum-calcium">0</span> MG </h1>
-              <p class="no-margin"> <span id="above">below</span> your mininum. </p>
+              <h1 class="ah"> <span class="minimum-calcium">0</span> MG </h1>
+              <p class="no-margin"> <span class="above">below</span> your mininum. </p>
             </div>
           </div>
         </div>
-        <div id="too-much">
+        <div id="too-much" style="display: none;">
           <div class="sum-result">
             <img class="main-img" src="too-little.svg">
             <p class="sum-text"> Your calcium intake is too high! Cut back on dairy and certain proteins to avoid unhealthy bones! </p>
@@ -169,10 +169,10 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
-              <h1> <span id="total-calcium">0</span> MG </h1>
+              <h1> <span class="total-calcium">0</span> MG </h1>
               <p class="no-margin"> of calcium today! </p>
               <br>
-              <h1 class="ah"> <span id="maximum-calcium">0</span> MG </h1>
+              <h1 class="ah"> <span class="maximum-calcium">0</span> MG </h1>
               <p class="no-margin"> above your max. </p>
             </div>
           </div>
