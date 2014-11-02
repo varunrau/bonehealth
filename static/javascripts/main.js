@@ -173,13 +173,16 @@ function setSection(to, from) {
 function restoreUser() {
   if (Cookies.enabled) {
     oldAge = Cookies.get(AGE);
-    oldPreg = Cookies.get(PREGNANT) == "false" ? false : true;
-    oldGender = Cookies.get(GENDER) == "false" ? false : true;
+    oldPreg = Cookies.get(PREGNANT);
+    oldGender = Cookies.get(GENDER);
     oldPage = +Cookies.get(PAGE);
 
-    if (oldAge) user.age = oldAge;
-    if (oldPreg) user.pregnant = oldPreg;
-    if (oldGender) user.gender = oldGender;
+    if (oldAge) user.age = oldAge == "false" ? false : true;;
+    if (oldPreg) user.pregnant = oldPreg == "false" ? false : true;
+    if (oldGender) {
+      if (oldGender == "false") disablePregnancy();
+      user.gender = oldGender;
+    }
 
     for (serving in user.servings) {
       var amount = isNaN(Cookies.get(serving)) ? 0 : Cookies.get(serving)
@@ -208,6 +211,17 @@ function setImage(category, numServings) {
   } else {
     image.attr("src", category + '3.svg');
   }
+}
+
+function disablePregnancy() {
+  $('.pregnant-input').prop('disabled', function() { return true; })
+  $('.pregnant-input').prop('checked', false);
+  $('.switch').css('opacity', 0.5);
+}
+
+function enablePregnancy() {
+  $('.pregnant-input').prop('disabled', function() { return false; })
+  $('.switch').css('opacity', 1);
 }
 
 $(document).ready(function () {
