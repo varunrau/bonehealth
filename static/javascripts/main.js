@@ -194,6 +194,8 @@ function restoreUser() {
       else if (oldPage == 2) { setSection($('#two'), $('.active')); }
       else if (oldPage == 3) { setSection($('#three'), $('.active')); }
     }
+
+    setPage3();
   }
 }
 // Updates the image
