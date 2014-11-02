@@ -19,28 +19,29 @@ $(document).ready(function() {
     }
   });
 
+  // Set cookies
+  $('#continue-page-2').click(function() {
+    // Grab values and set cookies
+    for (serving in servings) {
+      ingredient = servings[serving];
+      var servingValue = $('#' + ingredient + 'Number').val();
+      if (Cookies.enabled) {
+        Cookies.set(ingredient, servingValue);
+      }
+      user.servings[serving] = +servingValue;
+    }
+    setPage3();
+  });
+
   // Repopulate fields from cookies
   repopulatePage2()
 });
 
 function repopulatePage2() {
   for (serving in servings) {
-    oldServing = Cookies.get(serving);
-    if (oldServing) { $("#" + serving).val(oldServing); }
+    var ingredient = servings[serving];
+    var oldServing = Cookies.get(ingredient);
+    if (oldServing) { $("#" + ingredient + "Number").val(oldServing); }
   }
 }
-
-// Set cookies
-$('#continue-page-2').click(function() {
-  // Grab values and set cookies
-  for (serving in servings) {
-    var servingValue = $('#' + serving + 'Number').val();
-    if (Cookies.enabled) {
-      Cookies.set(serving, servingValue);
-    }
-    user.servings[serving] = +servingValue;
-  }
-  user.calcTotalServingSize();
-  setPage3();
-});
 

@@ -48,7 +48,7 @@
     </section>
 
     <!-- Page 2 -->
-        <section id="two">
+    <section id="two">
       <div id="box-container">
         <div class="box-wrapper left">
           <h2 class="box-header">General Dairy <span class="light-blue">(Cups)</span> </h2>
@@ -109,16 +109,16 @@
           <h2 class="box-header">Fortified Drinks <span class="light-blue">(Cups)</span> </h2>
           <div class="box">
             <img class="box-img" src="broccoli.svg">
-            <div class="number" id="drinks">
+            <div class="number" id="CAFortifiedD">
               <img class="up-arrow" src="arrow.svg">
-              <input type="number" id="drinksNumber" class="middle-num" value="0">
+              <input type="number" id="CAFortifiedDNumber" class="middle-num" value="0">
               <img class="down-arrow" src="arrow.svg">
             </div>
           </div>
         </div>
       </div>
       <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> BACK </div>
-      <div class="next next-float" onclick="setSection($('#three'), $('.active'));"> SUBMIT </div>
+      <div id="continue-page-2" class="next next-float" onclick="setSection($('#three'), $('.active'));"> SUBMIT </div>
     </section>
 
     <!-- Third page -->
