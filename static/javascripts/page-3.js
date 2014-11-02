@@ -15,20 +15,57 @@ function setPage3() {
   excess = upper - total;
 
   $('.total-calcium').html(total);
-  if (lack < 0) {
-    $('#bleh').show();
-    $('#woo').hide();
-    $('#too-much').hide();
-  } else if (excess < 0) {
-    $('#bleh').hide();
-    $('#woo').hide();
-    $('#too-much').show();
-  } else {
-    $('#bleh').hide();
-    $('#woo').show();
-    $('#too-much').hide();
-  }
+  if (lack < 0) setRecommendedMin();
+  else if (excess < 0) setRecommendedMax();
+  else setRecommendedReg();
   $('.minimum-calcium').html(Math.abs(lack));
   $('.maximum-calcium').html(Math.abs(excess));
 }
 
+function setRecommendedMin() {
+  $('#bleh').show();
+  $('#woo').hide();
+  $('#too-much').hide();
+  var minElement = getMinElement();
+  var minElementPicture = minElement + "3.svg";
+}
+
+function getMinElement() {
+  var minElement;
+  var min = Number.MAX_VALUE;
+  for (serving in user.servings) {
+    amount = user.servings[serving]
+    if (amount <= min) {
+      min = amount;
+      minElement = serving;
+    }
+  }
+  return minElement;
+}
+
+function setRecommendedMax() {
+  $('#bleh').hide();
+  $('#woo').hide();
+  $('#too-much').show();
+  var maxElement = getMaxElement();
+  var maxElementPicture = maxElement + "3.svg";
+}
+
+function getMaxElement() {
+  var maxElement;
+  var max = 0;
+  for (serving in user.servings) {
+    amount = user.servings[serving]
+    if (amount >= max) {
+      max = amount;
+      maxElement = serving;
+    }
+  }
+  return maxElement;
+}
+
+function setRecommendedReg() {
+  $('#bleh').hide();
+  $('#woo').show();
+  $('#too-much').hide();
+}

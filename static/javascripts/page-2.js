@@ -1,7 +1,3 @@
-
-// Categories
-var servings = Object.keys(user.servings);
-
 $(document).ready(function() {
 
   $('.up-arrow').click(function() {
