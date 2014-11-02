@@ -127,6 +127,27 @@
 
     <!-- Third page -->
     <section id="three">
+      <div id="sum-container">
+        <div id="woo">
+          <div class="sum-result">
+            <img class="main-img" src="too-perfect.svg">
+            <p class="sum-text"> Looks like your Calcium intake is at a normal and healthy levels. Keep up the good work! </p>
+          </div>
+          <div class="sum-graph">
+            <div class="sum-graph-box">
+              <p class="no-margin"> You've consumed </p>
+              <h1> 1000 MG </h1>
+              <p class="no-margin"> of Calcium today! </p>
+              <h1> 200 MG </h1>
+              <p class="no-margin"> above your mininum. </p>
+              <h1> 800 MG </h1>
+              <p class="no-margin"> below your max! </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
+      <div id="continue-page-2" class="next next-float" onclick="window.open('http://www.americanbonehealth.org/');"> LEARN MORE </div>
     </section>
   </div>
 </body>
