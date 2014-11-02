@@ -10,9 +10,11 @@
   <link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='main.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="main.js"></script>
   <script src="calculator.js"></script>
   <script src="cookies.js"></script>
+  <script src="main.js"></script>
+  <script src="page-1.js"></script>
+  <script src="page-2.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title> The Calc(ium)ulator </title>
   <style>
