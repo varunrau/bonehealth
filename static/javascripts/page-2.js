@@ -22,12 +22,19 @@ $('#continue-page-2').click(function() {
     if (Cookies.enabled) {
       Cookies.set(serving, servingValue);
     }
-    user.servings[serving] = servingValue;
+    user.servings[serving] = +servingValue;
   }
   user.calcTotalServingSize();
 });
 
 $('.add-serving').click(function() {
-  var category = $(this).parent().attr('id');
-  var currentNum = $('.' + category)
+  var category = '#' + $(this).parent().attr('id') + 'Number';
+  var currentNum = +$(category).val();
+  $(category).val(currentNum + 1);
+});
+
+$('.subtract-serving').click(function() {
+  var category = '#' + $(this).parent().attr('id') + 'Number';
+  var currentNum = +$(category).val();
+  $(category).val(currentNum - 1);
 });
