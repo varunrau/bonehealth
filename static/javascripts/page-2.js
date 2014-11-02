@@ -5,17 +5,32 @@ var servings = Object.keys(user.servings);
 $(document).ready(function() {
 
   $('.up-arrow').click(function() {
-    console.log('whatsupdog');
-    var category = '#' + $(this).parent().attr('id') + 'Number';
+    var ingredient = $(this).parent().attr('id');
+    var category = '#' + ingredient + 'Number';
     var currentNum = +$(category).val();
-    $(category).val(currentNum + 1);
+    if (ingredient == "vegetable" || ingredient == "desserts") {
+      $(category).val(currentNum + 0.5);
+    } else {
+      $(category).val(currentNum + 1);
+    }
   });
 
   $('.down-arrow').click(function() {
-    var category = '#' + $(this).parent().attr('id') + 'Number';
+    var ingredient = $(this).parent().attr('id');
+    var category = '#' + ingredient + 'Number';
     var currentNum = +$(category).val();
     if (currentNum > 0) {
-      $(category).val(currentNum - 1);
+      if (ingredient == "vegetable" || ingredient == "desserts") {
+        $(category).val(currentNum - 0.5);
+      } else {
+        $(category).val(currentNum - 1);
+      }
+    }
+  });
+
+  $('.no-negative').keypress(function(e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+      return false;
     }
   });
 
