@@ -162,6 +162,8 @@
               <p class="no-margin"> of Calcium today! </p>
               <h1 class="ah"> <span class="minimum-calcium">0</span> MG </h1>
               <p class="no-margin"> <span class="above">below</span> your mininum. </p>
+              <h1 class="food"><img class="sum-img" src="dairy1.svg"><span class="sum-img-h">DAIRY</span></h1>
+              <p class="no-margin"> is a food you lack! </p>
             </div>
           </div>
         </div>
@@ -178,6 +180,8 @@
               <br>
               <h1 class="ah"> <span class="maximum-calcium">0</span> MG </h1>
               <p class="no-margin"> above your max. </p>
+              <h1 class="food"><img class="sum-img" src="dairy1.svg"><span class="sum-img-h">DAIRY</span></h1>
+              <p class="no-margin"> is good to cut back on! </p>
             </div>
           </div>
         </div>
