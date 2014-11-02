@@ -33,6 +33,7 @@ $(document).ready(function() {
       Cookies.set(AGE, age);
       Cookies.set(PREGNANT, pregnant);
       Cookies.set(GENDER, gender);
+      Cookies.set(PAGE, 2);
     }
     user.age = age;
     user.pregnant = pregnant;
@@ -42,7 +43,6 @@ $(document).ready(function() {
 });
 
 function repopulatePage1() {
-  console.log('hello');
   oldAge = Cookies.get(AGE);
   oldPregnant = Cookies.get(PREGNANT) == 'false' ? false : true;
   oldGender = Cookies.get(GENDER) == 'false' ? 'M' : 'F';

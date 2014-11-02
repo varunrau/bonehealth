@@ -121,7 +121,7 @@
           </div>
         </div>
       </div>
-      <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> BACK </div>
+      <div id="back-page-1" class="next next-float" onclick="setSection($('#one'), $('.active'));"> BACK </div>
       <div id="continue-page-2" class="next next-float" onclick="setSection($('#three'), $('.active'));"> SUBMIT </div>
     </section>
 

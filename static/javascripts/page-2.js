@@ -34,6 +34,13 @@ $(document).ready(function() {
     }
   });
 
+  $('#back-page-1').click(function() {
+    console.log("helo");
+    if (Cookies.enabled) {
+      Cookies.set(PAGE, 1);
+    }
+  });
+
   // Set cookies
   $('#continue-page-2').click(function() {
     // Grab values and set cookies
@@ -42,6 +49,7 @@ $(document).ready(function() {
       var servingValue = $('#' + ingredient + 'Number').val();
       if (Cookies.enabled) {
         Cookies.set(ingredient, servingValue);
+        Cookies.set(PAGE, 3);
       }
       user.servings[ingredient] = +servingValue;
     }

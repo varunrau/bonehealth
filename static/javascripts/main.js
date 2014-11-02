@@ -147,6 +147,7 @@ function User(age, pregnant, gender) {
 var AGE = 'age';
 var PREGNANT = 'pregnant?';
 var GENDER = 'gender';
+var PAGE = 'page'
 // var DAIRY = 'dairy';
 // var DESSERTS = 'desserts';
 // var VEGETABLES = 'vegetables';
@@ -158,7 +159,8 @@ var GENDER = 'gender';
 var user = new User();
 
 function setSection(to, from) {
-  if (!(to.hasClass("active"))) {  
+  if (!(to.hasClass("active"))) { 
+    console.log(from);
     from.animate({"left":"-100%"},100,'linear')
     to.animate({"left":"0%"},100,'linear',function()
     {    
@@ -174,6 +176,7 @@ function restoreUser() {
     oldAge = Cookies.get(AGE);
     oldPreg = Cookies.get(PREGNANT) == "false" ? false : true;
     oldGender = Cookies.get(GENDER) == "false" ? false : true;
+    oldPage = +Cookies.get(PAGE);
 
     if (oldAge) user.age = oldAge;
     if (oldPreg) user.pregnant = oldPreg;
@@ -183,7 +186,16 @@ function restoreUser() {
       var amount = Cookies.get(serving)
       user.servings[serving] = isNaN(amount) ? 0 : amount;
     }
+
+    if (oldPage) {
+      console.log(oldPage == 2);
+      if (oldPage == 1) { setSection($('#one'), $('.active')); }
+      else if (oldPage == 2) { setSection($('#two'), $('.active')); }
+      else if (oldPage == 3) { setSection($('#three'), $('.active')); }
+    }
   }
 }
 
-$(document).ready(restoreUser());
+$(document).ready(function() {
+ restoreUser();
+});
