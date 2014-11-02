@@ -429,11 +429,101 @@ input.cmn-toggle-round:checked ~ .no {
   opacity: 0;
 }
 
+.gender-input {
+  margin: 0;
+  width: 50%;
+  height: 110px;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  font-family: Squada One, sans-serif;
+  font-size: 80px;
+  border: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#sum-container {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 85%;
+}
+
+#woo, #bleh, #too-much {
+  margin: auto;
+  width: 900px;
+  overflow: auto;
+  height: 100%;
+}
+
+.sum-graph {
+  box-sizing: border-box;
+  float: left;
+  width: 400px;
+  height: 100%;
+  padding: 25px;
+  padding-left: 0px;
+}
+
+.sum-graph-box {
+  box-sizing: border-box;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  background: #0088cc;
+  border-radius: 15px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.sum-graph-box:hover {
+  background: #0077c0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.sum-result {
+  float: left;
+  width: 450px;
+  padding-right: 50px;
+}
+
+.main-img {
+  margin-top: 40px;
+  width: 450px;
+}
+
+.sum-text {
+  line-height: 42px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.ok {
+  color: #88dd55;
+}
+
+.eh {
+  color: #f5eb17;
+}
+
+.ah {
+  color: #ef4153;
+}
+
 @media (max-width: 1400px) {
   #skelly {
     top: 120px;
     width: 250px;
     margin-right: 280px;
+  }
+
+  #joke, #joke-square, #joke-square-2 {
+    display: none;
   }
 
   #machine {
@@ -459,6 +549,14 @@ input.cmn-toggle-round:checked ~ .no {
 
   .next-float {
     margin-top: -5px;
+  }
+
+  .main-img {
+    margin-top: 0;
+  }
+
+  .sum-text {
+    margin-top: 0;
   }
 }
 
@@ -488,79 +586,4 @@ input.cmn-toggle-round:checked ~ .no {
   .next-float {
     margin-top: -20px;
   }
-}
-
-.gender-input {
-  margin: 0;
-  width: 50%;
-  height: 110px;
-  text-align: center;
-  background: transparent;
-  color: #fff;
-  font-family: Squada One, sans-serif;
-  font-size: 80px;
-  border: none;
-  display: inline-block;
-  padding: 10px;
-  cursor: pointer;
-}
-
-#sum-container {
-  box-sizing: border-box;
-  padding: 20px;
-  width: 100%;
-  height: 85%;
-}
-
-#woo {
-  margin: auto;
-  width: 900px;
-  overflow: auto;
-  height: 100%;
-}
-
-.sum-graph {
-  box-sizing: border-box;
-  float: left;
-  width: 400px;
-  height: 100%;
-  padding: 50px;
-  padding-right: 0;
-}
-
-.sum-graph-box {
-  box-sizing: border-box;
-  padding: 50px;
-  width: 100%;
-  height: 100%;
-  background: #0088cc;
-  border-radius: 15px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-}
-
-.sum-graph-box:hover {
-  background: #0077c0;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-}
-
-.sum-result {
-  float: left;
-  width: 500px;
-}
-
-.main-img {
-  margin-top: 50px;
-  width: 500px;
-}
-
-.sum-text {
-  margin: 0;
-  line-height: 42px;
-}
-
-.no-margin {
-  margin: 0;
-  font-size: 22px;
 }

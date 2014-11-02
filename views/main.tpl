@@ -17,14 +17,14 @@
   <script src="page-3.js"></script>
   <script src="page-2.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <title> The Calc(ium)ulator </title>
+  <title> The calc(ium)ulator </title>
 </head>
 <body>
   <div id="container">
     <!-- First 'page' -->
     <section id="one" class="active">
     <div id="joke-square"></div>
-    <div id="joke"> <p id="joke-text"> Welcome to the Calc(ium)ulator! It checks how healthy your diet is! Also, click this tooltip for some (humerus) puns! </p> </div>
+    <div id="joke"> <p id="joke-text"> Welcome to the calc(ium)ulator! It checks how healthy your diet is! Also, click this tooltip for some (humerus) puns! </p> </div>
     <div id="joke-square-2"></div>
     <img id="skelly" src="skelly.svg"></img>
     <img id="machine" src="machine.svg"></img>
@@ -128,26 +128,63 @@
     <!-- Third page -->
     <section id="three">
       <div id="sum-container">
-        <div id="woo">
+        <div id="woo" style="display: none;">
           <div class="sum-result">
             <img class="main-img" src="too-perfect.svg">
-            <p class="sum-text"> Looks like your Calcium intake is at a normal and healthy levels. Keep up the good work! </p>
+            <p class="sum-text"> Looks like your calcium intake is at normal and healthy levels. Keep up the good work! </p>
           </div>
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
               <h1> 1000 MG </h1>
-              <p class="no-margin"> of Calcium today! </p>
-              <h1> 200 MG </h1>
+              <p class="no-margin"> of calcium today! </p>
+              <br><br>
+              <h1 class="ok"> 200 MG </h1>
               <p class="no-margin"> above your mininum. </p>
+              <h1 class="ok"> 800 MG </h1>
+              <p class="no-margin"> below your max. </p>
+            </div>
+          </div>
+        </div>
+        <div id="bleh" style="display: none;">
+          <div class="sum-result">
+            <img class="main-img" src="too-little.svg">
+            <p class="sum-text"> The calcium intake in your diet is too low! Consume more dairy and consider supplements! </p>
+          </div>
+          <div class="sum-graph">
+            <div class="sum-graph-box">
+              <p class="no-margin"> You've consumed </p>
               <h1> 800 MG </h1>
-              <p class="no-margin"> below your max! </p>
+              <p class="no-margin"> of calcium today! </p>
+              <br><br>
+              <h1 class="ah"> 500 MG </h1>
+              <p class="no-margin"> below your mininum. </p>
+              <h1 class="eh"> 1200 MG </h1>
+              <p class="no-margin"> below your max. </p>
+            </div>
+          </div>
+        </div>
+        <div id="too-much">
+          <div class="sum-result">
+            <img class="main-img" src="too-little.svg">
+            <p class="sum-text"> Your calcium intake is too high! Cut back on dairy and certain proteins to avoid unhealthy bones! </p>
+          </div>
+          <div class="sum-graph">
+            <div class="sum-graph-box">
+              <p class="no-margin"> You've consumed </p>
+              <h1> 2500 MG </h1>
+              <p class="no-margin"> of calcium today! </p>
+              <br>
+              <h1 class="eh"> 2000 MG </h1>
+              <p class="no-margin"> above your mininum. </p>
+              <h1 class="ah"> 600 MG </h1>
+              <p class="no-margin"> above your max. </p>
             </div>
           </div>
         </div>
       </div>
       <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
-      <div id="continue-page-2" class="next next-float" onclick="window.open('http://www.americanbonehealth.org/');"> LEARN MORE </div>
+      <div id="continue-page-2" class="next next-float" onclick="window.open('http://americanbonehealth.org/what-you-should-know/nutrition');"> LEARN MORE </div>
     </section>
   </div>
 </body>
