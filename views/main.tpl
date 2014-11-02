@@ -53,6 +53,10 @@
 
     <!-- Page 2 -->
     <section id="two">
+      <div id="tip-square"></div>
+      <div id="tip-bubble"> <p id="bubble-text"> Tell us what you ate today! </p> </div>
+      <div id="tip-square-2"></div>
+      <img id="peek" src="peeking.svg"></img>
       <div id="box-container">
         <div class="box-wrapper left">
           <h2 class="box-header">General Dairy <span class="light-blue">(Cups)</span> </h2>
@@ -163,7 +167,7 @@
         </div>
         <div id="too-much" style="display: none;">
           <div class="sum-result">
-            <img class="main-img" src="too-little.svg">
+            <img class="main-img" src="too-over.svg">
             <p class="sum-text"> Your calcium intake is too high! Cut back on dairy and certain proteins to avoid unhealthy bones! </p>
           </div>
           <div class="sum-graph">
