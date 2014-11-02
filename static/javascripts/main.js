@@ -1,12 +1,40 @@
 // Generic user
 
+var servingSizes = {
+  'milk'        : 1,
+  'yogurt'      : 1,
+  'cheese'      : 1,
+  'tofu'        : 4,
+  'vegetables'  : 0.5,
+  'sardines'    : 3
+}
+
 function User(age, pregnant) {
   this.age = age;
   this.pregnant = pregnant;
+  this.servings = {
+    'milk'        : 0,
+    'yogurt'      : 0,
+    'cheese'      : 0,
+    'tofu'        : 0,
+    'vegetables'  : 0,
+    'sardines'    : 0
+  }
+  this.totalServingSize = 0;
+
+  this.calcTotalServingSize = function() {
+    this.totalServingSize = 0;
+    for (var serving in this.servings) {
+      this.totalServingSize += serving / servingSizes[serving];
+    }
+    return this.totalServingSize;
+  }
 }
 
 var AGE = 'age';
 var PREGNANT = 'pregnant?'
+
+var user = new User();
 
 $(document).ready(function() {
 
@@ -25,40 +53,5 @@ $(document).ready(function() {
       });
     }
   }
-
-  // Cookie Logic
-
-  var user;
-
-  $('#continue-page-1').click(function() {
-    var age = $("#age-input").val();
-    var pregnant = $('#pregnant-input').val()
-    if (Cookies.enabled) {
-      Cookies.set(AGE, age);
-      Cookies.set(PREGNANT, pregnant);
-    }
-    user = new User(age, pregnant);
-  });
-
-  $('#continue-page-2').click(function() {
-
-  });
-
-  // Form logic here
-
-  $('#age-input').keypress(function(e) {
-    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-      // Add animation here!
-      return false;
-    }
-  });
-
-  // Repopulation
-  oldAge = Cookies.get(AGE);
-  oldPregnant = Cookies.get(PRENANT);
-
-  if (oldAge) { $('#age-input').text(oldAge); }
-  if (oldPregnant) { $('#prenant-input').prop('checked', true); }
-
 });
 
