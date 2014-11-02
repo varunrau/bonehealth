@@ -136,12 +136,12 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
-              <h1> 1000 MG </h1>
+              <h1> <span id="total-calcium">0</span> MG </h1>
               <p class="no-margin"> of calcium today! </p>
               <br><br>
-              <h1 class="ok"> 200 MG </h1>
+              <h1 class="ok"> <span id="minimum-calcium">0</span> MG </h1>
               <p class="no-margin"> above your mininum. </p>
-              <h1 class="ok"> 800 MG </h1>
+              <h1 class="ok"> <span id="maximum-calcium">0</span> MG </h1>
               <p class="no-margin"> below your max. </p>
             </div>
           </div>
@@ -157,9 +157,7 @@
               <h1> <span id="total-calcium">0</span> MG </h1>
               <p class="no-margin"> of Calcium today! </p>
               <h1 class="ok"> <span id="minimum-calcium">0</span> MG </h1>
-              <p class="no-margin"> <span id="above">above</span> your mininum. </p>
-              <h1 class="ok"> <span id="maximum-calcium">0</span> MG </h1>
-              <p class="no-margin"> <span id="below">below</span> your max! </p>
+              <p class="no-margin"> <span id="above">below</span> your mininum. </p>
             </div>
           </div>
         </div>
@@ -171,12 +169,10 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
-              <h1> 2500 MG </h1>
+              <h1> <span id="total-calcium">0</span> MG </h1>
               <p class="no-margin"> of calcium today! </p>
               <br>
-              <h1 class="eh"> 2000 MG </h1>
-              <p class="no-margin"> above your mininum. </p>
-              <h1 class="ah"> 600 MG </h1>
+              <h1 class="ah"> <span id="maximum-calcium">0</span> MG </h1>
               <p class="no-margin"> above your max. </p>
             </div>
           </div>
