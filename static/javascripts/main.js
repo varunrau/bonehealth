@@ -170,6 +170,21 @@ function setSection(to, from) {
   }
 }
 
+var hidden = true;
+
+function toggleNav() {
+  if (hidden) {
+    $("#about-text").show();
+    $("#about-square").show();
+    $("#about-square-2").show();
+  } else {
+    $("#about-text").hide();
+    $("#about-square").hide();
+    $("#about-square-2").hide();
+  }
+  hidden = !(hidden);
+}
+
 function restoreUser() {
   if (Cookies.enabled) {
     oldAge = Cookies.get(AGE);

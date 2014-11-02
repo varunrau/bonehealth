@@ -71,11 +71,11 @@ $(document).ready(function() {
 
 function generatePlea() {
   var pleas = ["I ate five ice creams today!",
-               "Don't click here, click there!",
-               "Calcium is bone-tiful in foods!",
+               "Don't click here click there!",
+               "Calcium is bone-tiful!",
                "Please let me know...please?",
                "I'm here to help you!",
-               "Don't make me come over there!"];
+               "Just hurry up!"];
   var random = Math.floor(Math.random() * pleas.length);
   return pleas[random];
 }
