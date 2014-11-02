@@ -14,7 +14,23 @@ $(document).ready(function() {
   $('.down-arrow').click(function() {
     var category = '#' + $(this).parent().attr('id') + 'Number';
     var currentNum = +$(category).val();
-    $(category).val(currentNum - 1);
+    if (currentNum > 0) {
+      $(category).val(currentNum - 1);
+    }
+  });
+
+  // Set cookies
+  $('#continue-page-2').click(function() {
+    // Grab values and set cookies
+    for (serving in servings) {
+      ingredient = servings[serving];
+      var servingValue = $('#' + ingredient + 'Number').val();
+      if (Cookies.enabled) {
+        Cookies.set(ingredient, servingValue);
+      }
+      user.servings[ingredient] = +servingValue;
+    }
+    setPage3();
   });
 
   // Repopulate fields from cookies
@@ -23,22 +39,9 @@ $(document).ready(function() {
 
 function repopulatePage2() {
   for (serving in servings) {
-    oldServing = Cookies.get(serving);
-    if (oldServing) { $("#" + serving).val(oldServing); }
+    var ingredient = servings[serving];
+    var oldServing = Cookies.get(ingredient);
+    if (oldServing) { $("#" + ingredient + "Number").val(oldServing); }
   }
 }
-
-// Set cookies
-$('#continue-page-2').click(function() {
-  // Grab values and set cookies
-  for (serving in servings) {
-    var servingValue = $('#' + serving + 'Number').val();
-    if (Cookies.enabled) {
-      Cookies.set(serving, servingValue);
-    }
-    user.servings[serving] = +servingValue;
-  }
-  user.calcTotalServingSize();
-  setPage3();
-});
 
