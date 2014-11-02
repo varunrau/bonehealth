@@ -23,6 +23,8 @@
   <div id="container">
     <!-- First 'page' -->
     <section id="one" class="active">
+    <div id="joke"> <p> Want to hear a joke? (I'll make sure it's humerus). </p> </div>
+    <img id="skelly" src="skelly.svg"></img>
     <img id="machine" src="machine.svg"></img>
     <h1 class="header"> THE CALC<span class="light-blue">IUM</span>ULATOR </h1>
     <div class="content">
