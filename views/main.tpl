@@ -6,8 +6,8 @@
   BLUE: 009ddc
   DARK BLUE: 0077c0
   -->
-  <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='main.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="cookies.js"></script>
