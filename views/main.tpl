@@ -6,11 +6,10 @@
   BLUE: 009ddc
   DARK BLUE: 0077c0
   -->
-  <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='main.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="calculator.js"></script>
   <script src="cookies.js"></script>
   <script src="humerus.js"></script>
   <script src="main.js"></script>
@@ -22,13 +21,106 @@
 </head>
 <body>
   <div id="container">
+    <!-- First 'page' -->
     <section id="one" class="active">
-      <h1 class="white"> THE CALC(IUM)ULATOR </h1>
-      <div class="next" onclick="setSection($('#two'), $('.active'));"></div>
+    <img id="machine" src="machine.svg"></img>
+    <h1 class="header"> THE CALC<span class="light-blue">IUM</span>ULATOR </h1>
+    <div class="content">
+      <div class="wrapper">
+        <p class="section-header"> Gender </p>
+        <div class="gender-input">F</div>
+      </div>
+      <div class="wrapper">
+        <p class="section-header"> Age </p>
+        <input class="age-input" type="number" value="18">
+      </div>
+      <div class="wrapper">
+        <p class="section-header"> Pregnant </p>
+        <div class="switch">
+          <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round pregnant-input" type="checkbox">
+          <label for="cmn-toggle-1"></label>
+          <h2 class="yes"> YES </h2>
+          <h2 class="no"> NO </h2>
+        </div>
+      </div>
+    </div>
+    <div id="continue-page-1" class="next" onclick="setSection($('#two'), $('.active'));"> CONTINUE </div>
     </section>
+
+    <!-- Page 2 -->
     <section id="two">
-      <div class="next" onclick="setSection($('#three'), $('.active'));"></div>
+      <div id="box-container">
+        <div class="box-wrapper">
+          <h2 class="box-header">General Dairy <span class="light-blue">(Cups)</span> </h2>
+          <div class="box">
+            <img class="box-img" src="broccoli.svg">
+            <div class="number">
+              <img class="up-arrow" src="arrow.svg">
+              <input type="number" class="middle-num" value="0">
+              <img class="down-arrow" src="arrow.svg">
+            </div>
+          </div>
+        </div>
+        <div class="box-wrapper">
+          <h2 class="box-header">Frozen Desserts <span class="light-blue">(Servings)</span> </h2>
+          <div class="box">
+            <img class="box-img" src="broccoli.svg">
+            <div class="number">
+              <img class="up-arrow" src="arrow.svg">
+              <input type="number" class="middle-num" value="0">
+              <img class="down-arrow" src="arrow.svg">
+            </div>
+          </div>
+        </div>
+        <div class="box-wrapper">
+          <h2 class="box-header">Vegetables <span class="light-blue">(Cups)</span> </h2>
+          <div class="box">
+            <img class="box-img" src="broccoli.svg">
+            <div class="number">
+              <img class="up-arrow" src="arrow.svg">
+              <input type="number" class="middle-num" value="0">
+              <img class="down-arrow" src="arrow.svg">
+            </div>
+          </div>
+        </div>
+        <div class="box-wrapper">
+          <h2 class="box-header">Fish and Nuts <span class="light-blue">(Ounces)</span> </h2>
+          <div class="box">
+            <img class="box-img" src="broccoli.svg">
+            <div class="number">
+              <img class="up-arrow" src="arrow.svg">
+              <input type="number" class="middle-num" value="0">
+              <img class="down-arrow" src="arrow.svg">
+            </div>
+          </div>
+        </div>
+        <div class="box-wrapper">
+          <h2 class="box-header">Cheese Entrees <span class="light-blue">(Pieces)</span> </h2>
+          <div class="box">
+            <img class="box-img" src="broccoli.svg">
+            <div class="number">
+              <img class="up-arrow" src="arrow.svg">
+              <input type="number" class="middle-num" value="0">
+              <img class="down-arrow" src="arrow.svg">
+            </div>
+          </div>
+        </div>
+        <div class="box-wrapper">
+          <h2 class="box-header">Fortified Drinks <span class="light-blue">(Cups)</span> </h2>
+          <div class="box">
+            <img class="box-img" src="broccoli.svg">
+            <div class="number">
+              <img class="up-arrow" src="arrow.svg">
+              <input type="number" class="middle-num" value="0">
+              <img class="down-arrow" src="arrow.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> BACK </div>
+      <div class="next next-float" onclick="setSection($('#three'), $('.active'));"> SUBMIT </div>
     </section>
+    <!-- Third page -->
     <section id="three">
     </section>
   </div>

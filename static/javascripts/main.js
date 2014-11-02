@@ -142,7 +142,8 @@ function User(age, pregnant, gender) {
 }
 
 var AGE = 'age';
-var PREGNANT = 'pregnant?'
+var PREGNANT = 'pregnant?';
+var GENDER = 'gender';
 
 var user = new User();
 
