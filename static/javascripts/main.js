@@ -160,7 +160,6 @@ var user = new User();
 
 function setSection(to, from) {
   if (!(to.hasClass("active"))) { 
-    console.log(from);
     from.animate({"left":"-100%"},100,'linear')
     to.animate({"left":"0%"},100,'linear',function()
     {    
@@ -189,11 +188,12 @@ function restoreUser() {
     }
 
     if (oldPage) {
-      console.log(oldPage == 2);
       if (oldPage == 1) { setSection($('#one'), $('.active')); }
       else if (oldPage == 2) { setSection($('#two'), $('.active')); }
       else if (oldPage == 3) { setSection($('#three'), $('.active')); }
     }
+
+    setPage3();
   }
 }
 // Updates the image

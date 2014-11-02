@@ -138,16 +138,16 @@
               <p class="no-margin"> You've consumed </p>
               <h1> <span id="total-calcium">0</span> MG </h1>
               <p class="no-margin"> of Calcium today! </p>
-              <h1> <span id="minimum-calcium">200</span> MG </h1>
+              <h1> <span id="minimum-calcium">0</span> MG </h1>
               <p class="no-margin"> <span id="above">above</span> your mininum. </p>
-              <h1> <span id="maximum-calcium">800</span> MG </h1>
+              <h1> <span id="maximum-calcium">0</span> MG </h1>
               <p class="no-margin"> <span id="below">below</span> your max! </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
-      <div id="continue-page-2" class="next next-float" onclick="window.open('http://www.americanbonehealth.org/');"> LEARN MORE </div>
+      <div id="back-page-1-2" class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
+      <div class="next next-float" onclick="window.open('http://www.americanbonehealth.org/');"> LEARN MORE </div>
     </section>
   </div>
 </body>
