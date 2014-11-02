@@ -5,45 +5,53 @@ var servings = Object.keys(user.servings);
 $(document).ready(function() {
 
   $('.up-arrow').click(function() {
-    var ingredient = $(this).parent().attr('id');
-    var category = '#' + ingredient + 'Number';
+    var categoryName = $(this).parent().attr('id');
+    var category = '#' + $(this).parent().attr('id') + 'Number';
     var currentNum = +$(category).val();
-    if (ingredient == "vegetable" || ingredient == "desserts") {
-      $(category).val(currentNum + 0.5);
+    if (categoryName == "vegetables" || categoryName == "desserts") {
+      currentNum += 0.5;
+      $(category).val(currentNum);
     } else {
-      $(category).val(currentNum + 1);
+      currentNum += 1;
+      $(category).val(currentNum);
     }
+    console.log(categoryName);
+    setImage(categoryName, currentNum);
   });
 
   $('.down-arrow').click(function() {
-    var ingredient = $(this).parent().attr('id');
-    var category = '#' + ingredient + 'Number';
+    var categoryName = $(this).parent().attr('id');
+    var category = '#' + categoryName + 'Number';
     var currentNum = +$(category).val();
     if (currentNum > 0) {
-      if (ingredient == "vegetable" || ingredient == "desserts") {
-        $(category).val(currentNum - 0.5);
+      if (categoryName == "vegetables" || categoryName == "desserts") {
+        currentNum -= 0.5;
+        $(category).val(currentNum);
       } else {
-        $(category).val(currentNum - 1);
+        currentNum -= 1;
+        $(category).val(currentNum);
       }
     }
+    setImage(categoryName, currentNum);
   });
 
   $('.no-negative').keypress(function(e) {
     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
       return false;
     }
+    setImage(categoryName, currentNum);
   });
 
   // Set cookies
   $('#continue-page-2').click(function() {
     // Grab values and set cookies
     for (serving in servings) {
-      ingredient = servings[serving];
-      var servingValue = $('#' + ingredient + 'Number').val();
+      var category = servings[serving];
+      var servingValue = $('#' + category + 'Number').val();
       if (Cookies.enabled) {
-        Cookies.set(ingredient, servingValue);
+        Cookies.set(category, servingValue);
       }
-      user.servings[ingredient] = +servingValue;
+      user.servings[category] = +servingValue;
     }
     setPage3();
   });
@@ -59,4 +67,5 @@ function repopulatePage2() {
     if (oldServing) { $("#" + ingredient + "Number").val(oldServing); }
   }
 }
+
 
