@@ -10,6 +10,6 @@ function generateHumerusPuns() {
               "Q: How did skeletons send their letters in the old days? \n\nA: By bone-y express!",
               "Q: What happened to the skeleton who stayed by the fire too long ? \n\nA: He became bone dry!",
               ];
-  var random = Math.ceil(Math.random() * lols.length)
+  var random = Math.floor(Math.random() * lols.length)
   return lols[random].replace(/\n/g, '<br/>');
 }
