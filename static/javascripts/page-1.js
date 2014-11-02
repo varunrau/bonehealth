@@ -14,10 +14,23 @@ $(document).ready(function() {
     var gender = $(this).html();
     if (gender == 'F') {
       $(this).html('M');
+      disablePregnancy();
     } else {
       $(this).html('F');
+      enablePregnancy();
     }
   });
+
+  function disablePregnancy() {
+    $('.pregnant-input').prop('disabled', function() { return true; })
+    $('.pregnant-input').prop('checked', false);
+    $('.switch').css('opacity', 0.5);
+  }
+
+  function enablePregnancy() {
+    $('.pregnant-input').prop('disabled', function() { return false; })
+    $('.switch').css('opacity', 1);
+  }
 
   $('#joke').click(function() {
     var joke = generateHumerusPuns();
