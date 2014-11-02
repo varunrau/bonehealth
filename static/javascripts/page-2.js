@@ -28,7 +28,7 @@ $(document).ready(function() {
       if (Cookies.enabled) {
         Cookies.set(ingredient, servingValue);
       }
-      user.servings[serving] = +servingValue;
+      user.servings[ingredient] = +servingValue;
     }
     setPage3();
   });
