@@ -1,6 +1,6 @@
 
 // Categories
-var categories = Object.keys(user.categories);
+var servings = Object.keys(user.servings);
 
 $(document).ready(function() {
   // Repopulate fields from cookies
@@ -8,21 +8,21 @@ $(document).ready(function() {
 });
 
 function repopulatePage2() {
-  for (category in categories) {
-    oldCategory = Cookies.get(category);
-    if (oldCategory) {  }
+  for (serving in servings) {
+    oldServing = Cookies.get(serving);
+    if (oldServing) { $("#" + serving).val(oldServing); }
   }
 }
 
 // Set cookies
 $('#continue-page-2').click(function() {
   // Grab values and set cookies
-  for (category in categories) {
-    var categoryValue = $('#' + category).val();
+  for (serving in servings) {
+    var servingValue = $('#' + serving).val();
     if (Cookies.enabled) {
-      Cookies.set(category, categoryValue);
+      Cookies.set(serving, servingValue);
     }
-    user.servings[category] = categoryValue;
+    user.servings[serving] = servingValue;
   }
   user.calcTotalServingSize();
 });
