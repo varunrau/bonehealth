@@ -199,17 +199,13 @@ function restoreUser() {
 // Updates the image
 function setImage(category, numServings) {
   var image = $("#" + category + "Image");
-  console.log(category + "Image");
   if (((category == "vegetables" || category == "desserts") && numServings <= 0.5)
     || !(category == "vegetables" || category == "desserts") && numServings <= 1) {
-      console.log(category + '1.svg')
     image.attr("src", category + "1.svg");
   } else if (numServings <= 3 && !(category == "vegetables" || category == "desserts")
     || ((category == "vegetables" || category == "desserts") && numServings <= 1.5)) {
-      console.log(category + '2.svg')
     image.attr("src", category + "2.svg");
   } else {
-      console.log(category + '3.svg')
     image.attr("src", category + '3.svg');
   }
 }
