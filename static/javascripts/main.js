@@ -5,6 +5,9 @@ function User(age, pregnant) {
   this.pregnant = pregnant;
 }
 
+var AGE = 'age';
+var PREGNANT = 'pregnant?'
+
 $(document).ready(function() {
 
   // Switch between sections
@@ -31,8 +34,8 @@ $(document).ready(function() {
     var age = $("#age-input").val();
     var pregnant = $('#pregnant-input').val()
     if (Cookies.enabled) {
-      Cookies.set("age", age);
-      Cookies.set("pregnant?", pregnant);
+      Cookies.set(AGE, age);
+      Cookies.set(PREGNANT, pregnant);
     }
     user = new User(age, pregnant);
   });
@@ -51,6 +54,11 @@ $(document).ready(function() {
   });
 
   // Repopulation
+  oldAge = Cookies.get(AGE);
+  oldPregnant = Cookies.get(PRENANT);
+
+  if (oldAge) { $('#age-input').text(oldAge); }
+  if (oldPregnant) { $('#prenant-input').prop('checked', true); }
 
 });
 
