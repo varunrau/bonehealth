@@ -136,6 +136,7 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
+<<<<<<< HEAD
               <h1> 1000 MG </h1>
               <p class="no-margin"> of calcium today! </p>
               <br><br>
@@ -154,13 +155,12 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
-              <h1> 800 MG </h1>
-              <p class="no-margin"> of calcium today! </p>
-              <br><br>
-              <h1 class="ah"> 500 MG </h1>
-              <p class="no-margin"> below your mininum. </p>
-              <h1 class="eh"> 1200 MG </h1>
-              <p class="no-margin"> below your max. </p>
+              <h1> <span id="total-calcium">0</span> MG </h1>
+              <p class="no-margin"> of Calcium today! </p>
+              <h1 class="ok"> <span id="minimum-calcium">0</span> MG </h1>
+              <p class="no-margin"> <span id="above">above</span> your mininum. </p>
+              <h1 class="ok"> <span id="maximum-calcium">0</span> MG </h1>
+              <p class="no-margin"> <span id="below">below</span> your max! </p>
             </div>
           </div>
         </div>
@@ -183,8 +183,8 @@
           </div>
         </div>
       </div>
-      <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
-      <div id="continue-page-2" class="next next-float" onclick="window.open('http://americanbonehealth.org/what-you-should-know/nutrition');"> LEARN MORE </div>
+      <div id="back-page-1-2" class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
+      <div class="next next-float" onclick="window.open('window.open('http://americanbonehealth.org/what-you-should-know/nutrition');"> LEARN MORE </div>
     </section>
   </div>
 </body>

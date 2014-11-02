@@ -160,7 +160,6 @@ var user = new User();
 
 function setSection(to, from) {
   if (!(to.hasClass("active"))) { 
-    console.log(from);
     from.animate({"left":"-100%"},100,'linear')
     to.animate({"left":"0%"},100,'linear',function()
     {    
@@ -189,27 +188,24 @@ function restoreUser() {
     }
 
     if (oldPage) {
-      console.log(oldPage == 2);
       if (oldPage == 1) { setSection($('#one'), $('.active')); }
       else if (oldPage == 2) { setSection($('#two'), $('.active')); }
       else if (oldPage == 3) { setSection($('#three'), $('.active')); }
     }
+
+    setPage3();
   }
 }
 // Updates the image
 function setImage(category, numServings) {
   var image = $("#" + category + "Image");
-  console.log(category + "Image");
   if (((category == "vegetables" || category == "desserts") && numServings <= 0.5)
     || !(category == "vegetables" || category == "desserts") && numServings <= 1) {
-      console.log(category + '1.svg')
     image.attr("src", category + "1.svg");
   } else if (numServings <= 3 && !(category == "vegetables" || category == "desserts")
     || ((category == "vegetables" || category == "desserts") && numServings <= 1.5)) {
-      console.log(category + '2.svg')
     image.attr("src", category + "2.svg");
   } else {
-      console.log(category + '3.svg')
     image.attr("src", category + '3.svg');
   }
 }
