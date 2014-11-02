@@ -14,7 +14,9 @@ $(document).ready(function() {
   $('.down-arrow').click(function() {
     var category = '#' + $(this).parent().attr('id') + 'Number';
     var currentNum = +$(category).val();
-    $(category).val(currentNum - 1);
+    if (currentNum > 0) {
+      $(category).val(currentNum - 1);
+    }
   });
 
   // Repopulate fields from cookies
