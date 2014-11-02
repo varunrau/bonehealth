@@ -136,7 +136,6 @@
           <div class="sum-graph">
             <div class="sum-graph-box">
               <p class="no-margin"> You've consumed </p>
-<<<<<<< HEAD
               <h1> 1000 MG </h1>
               <p class="no-margin"> of calcium today! </p>
               <br><br>

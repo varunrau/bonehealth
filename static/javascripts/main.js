@@ -109,7 +109,7 @@ function User(age, pregnant, gender) {
       portion = this.servings[serving] / servingSizes[serving];
       totalServingSize += portion * servingCalciums[serving];
     }
-    return totalServingSize;
+    return parseInt(totalServingSize);
   }
 
   this.findGroup = function() {

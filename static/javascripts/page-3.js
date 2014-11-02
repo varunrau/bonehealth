@@ -13,6 +13,7 @@ function setPage3() {
   total = user.calcTotalServingSize();
   lack = total - lower;
   excess = upper - total;
+
   $('#total-calcium').html(total);
   if (lack < 0) { $('#above').html("below"); }
   $('#minimum-calcium').html(Math.abs(lack));
