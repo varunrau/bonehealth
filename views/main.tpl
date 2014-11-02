@@ -16,6 +16,7 @@
   <script src="main.js"></script>
   <script src="page-1.js"></script>
   <script src="page-2.js"></script>
+  <script src="page-3.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title> The Calc(ium)ulator </title>
   <style>

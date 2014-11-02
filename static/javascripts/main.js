@@ -29,6 +29,9 @@ function User(age, pregnant) {
     }
     return this.totalServingSize;
   }
+
+  this.findGroup = function() {
+  }
 }
 
 var AGE = 'age';

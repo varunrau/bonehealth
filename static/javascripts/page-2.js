@@ -25,6 +25,7 @@ $('#continue-page-2').click(function() {
     user.servings[serving] = +servingValue;
   }
   user.calcTotalServingSize();
+  setPage3();
 });
 
 $('.add-serving').click(function() {
