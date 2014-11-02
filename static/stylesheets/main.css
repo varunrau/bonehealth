@@ -63,11 +63,13 @@ h1, h2, h3, p {
   box-sizing: border-box;
   text-align: center;
   right: 50%;
-  top: 100px;
+  top: 50px;
+  overflow: hidden;
   position: absolute;
   z-index: 1;
-  width: 350px;
-  padding: 33px;
+  width: 300px;
+  height: 200px;
+  padding: 32px;
   padding-top: 0;
   margin-right: 350px;
   background: #0088cc;
@@ -83,6 +85,40 @@ h1, h2, h3, p {
   cursor: pointer;
   background: #0077c0;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+#joke:hover ~ #joke-square-2 {
+  cursor: pointer;
+  background: #0077c0;
+}
+
+#joke-square {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  top: 235px;
+  right: 50%;
+  margin-right: 450px;
+  background: #0088cc;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(45deg);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+#joke-square-2 {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  top: 235px;
+  right: 50%;
+  margin-right: 450px;
+  background: #0088cc;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(45deg);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
 }
 
 .next {
