@@ -60,25 +60,6 @@ $(document).ready(function() {
   repopulatePage2()
 });
 
-// Updates the image
-function setImage(category, numServings) {
-  var image = $("#" + category + "Image");
-  console.log(category);
-  console.log(numServings);
-  if (((category == "vegetables" || category == "desserts") && numServings <= 0.5)
-    || !(category == "vegetables" || category == "desserts") && numServings <= 1) {
-      console.log('first')
-    image.attr("src", category + "1.svg");
-  } else if (numServings <= 3 && !(category == "vegetables" || category == "desserts")
-    || ((category == "vegetables" || category == "desserts") && numServings <= 1.5)) {
-      console.log('second')
-    image.attr("src", category + "2.svg");
-  } else {
-      console.log('thrid')
-    image.attr("src", category + "3.svg");
-  }
-}
-
 function repopulatePage2() {
   for (serving in servings) {
     var ingredient = servings[serving];
