@@ -19,6 +19,11 @@ $(document).ready(function() {
     }
   });
 
+  $('#joke').click(function() {
+    var joke = generateHumerusPuns();
+    $(this).children('#joke-text').html(joke);
+  });
+
   $('#continue-page-1').click(function() {
     var age = $(".age-input").val();
     var pregnant = $('.pregnant-input').is(":checked");

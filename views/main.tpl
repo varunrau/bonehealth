@@ -24,7 +24,7 @@
     <!-- First 'page' -->
     <section id="one" class="active">
     <div id="joke-square"></div>
-    <div id="joke"> <p> Want to hear a joke? (I'll make sure it's humerus). </p> </div>
+    <div id="joke"> <p id="joke-text"> Welcome to the Calc(ium)ulator! It checks how healthy your diet is! Also, click this tooltip for some (humerus) puns! </p> </div>
     <div id="joke-square-2"></div>
     <img id="skelly" src="skelly.svg"></img>
     <img id="machine" src="machine.svg"></img>

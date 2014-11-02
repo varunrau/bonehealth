@@ -3,6 +3,10 @@ body, html {
   margin: 0;
   height: 100%;
   color: #333;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none;
 }
 
 input:focus,
@@ -59,6 +63,11 @@ h1, h2, h3, p {
   margin-right: 285px;
 }
 
+#joke-text {
+  margin-top: 0;
+  font-size: 20px;
+}
+
 #joke {
   box-sizing: border-box;
   text-align: center;
@@ -69,8 +78,7 @@ h1, h2, h3, p {
   z-index: 1;
   width: 300px;
   height: 200px;
-  padding: 32px;
-  padding-top: 0;
+  padding: 25px;
   margin-left: -650px;
   background: #0088cc;
   color: #fff;
@@ -364,7 +372,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .middle-num {
-  width: 100%;
+  width: 100% !important;
   height: 44% !important;
 }
 
@@ -495,9 +503,5 @@ input.cmn-toggle-round:checked ~ .no {
   display: inline-block;
   padding: 10px;
   cursor: pointer;
-  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-  -moz-user-select: none; /* mozilla browsers */
-  -khtml-user-select: none; /* webkit (konqueror) browsers */
-  -ms-user-select: none;
 }
 
