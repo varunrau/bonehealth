@@ -171,7 +171,7 @@
         <div id="too-much" style="display: none;">
           <div class="sum-result">
             <img class="main-img" src="too-over.svg">
-            <p class="sum-text"> Your calcium intake is too high! Cut back on dairy and certain proteins to avoid unhealthy bones! </p>
+            <p class="sum-text"> Your calcium intake is too high! Be careful with dairy and certain proteins to avoid side effects! </p>
           </div>
           <div class="sum-graph">
             <div class="sum-graph-box">
@@ -190,6 +190,13 @@
       <div id="back-page-1-2" class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
       <div class="next next-float" onclick="window.open('http://americanbonehealth.org/what-you-should-know/nutrition');"> LEARN MORE </div>
     </section>
+    <!--<img id="about" class="nav" src="profile.svg">-->
+    <div id="about-square" onclick="toggleNav()"></div>
+    <div id="about-text" onclick="toggleNav()">
+      <p class="no-margin px20">This app is based on The Rule of 300, an easy way to calculate daily intake: <span class="light-blue"> Daily calcium = (# of servings of dairy / fortified juice) x 300 + 300.</span> </p>
+    </div>
+    <div id="about-square-2" onclick="toggleNav()"></div>
+    <img id="question" class="nav" src="question.svg" onclick="toggleNav()">
   </div>
 </body>
 </html>

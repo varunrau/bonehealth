@@ -68,6 +68,34 @@ h1, h2, h3, p {
   font-size: 20px;
 }
 
+#about-text {
+  box-sizing: border-box;
+  text-align: center;
+  top: 105px;
+  right: 15px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 400px;
+  height: 200px;
+  padding: 25px;
+  background: #0088cc;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+#about-text, #about-square, #about-square-2 {
+  display: none;
+}
+
+.px20 {
+  font-size: 20px;
+}
+
 #tip-bubble {
   box-sizing: border-box;
   text-align: center;
@@ -109,7 +137,7 @@ h1, h2, h3, p {
   -webkit-transition: 0.5s;
 }
 
-#joke:hover, #tip-bubble:hover {
+#joke:hover, #tip-bubble:hover, #about-text:hover {
   cursor: pointer;
   background: #0077c0;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
@@ -177,6 +205,37 @@ h1, h2, h3, p {
   -webkit-transform: rotate(45deg);
   transition: 0.5s;
   -webkit-transition: 0.5s;
+}
+
+#about-square {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  right: 35px;
+  background: #0088cc;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(45deg);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+#about-square-2 {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  right: 35px;
+  background: #0088cc;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(45deg);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+
+#about-text:hover ~ #about-square-2 {
+  cursor: pointer;
+  background: #0077c0;
 }
 
 .next {
@@ -592,6 +651,30 @@ input.cmn-toggle-round:checked ~ .no {
   display: block;
   width: 100%;
   overflow: auto;
+}
+
+.nav {
+  position: fixed;
+  z-index: 1;
+  top: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: #0088cc;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+
+.nav:hover {
+  cursor: pointer;
+  background: #0077c0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+#about {
+  right: 90px;
 }
 
 @media (min-height: 750px) {
