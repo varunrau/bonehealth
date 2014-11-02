@@ -1,3 +1,11 @@
+$(document).ready(function() {
+  $("#back-page-1-2").click(function() {
+    if (Cookies.enabled) {
+      Cookies.set(PAGE, 1);
+    }
+  });
+});
+
 function setPage3() {
   user.group = user.findGroup();
   lower = user.group.lower;
@@ -11,3 +19,4 @@ function setPage3() {
   if (excess < 0) { $('#below').html("above"); }
   $('#maximum-calcium').html(Math.abs(excess));
 }
+

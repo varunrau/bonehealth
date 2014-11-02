@@ -146,8 +146,8 @@
           </div>
         </div>
       </div>
-      <div class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
-      <div id="continue-page-2" class="next next-float" onclick="window.open('http://www.americanbonehealth.org/');"> LEARN MORE </div>
+      <div id="back-page-1-2" class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
+      <div class="next next-float" onclick="window.open('http://www.americanbonehealth.org/');"> LEARN MORE </div>
     </section>
   </div>
 </body>
