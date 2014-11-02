@@ -34,6 +34,12 @@ $(document).ready(function() {
     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
       return false;
     }
+  });
+
+  $('.no-negative').keyup(function(e) {
+    var categoryName = $(this).parent().attr('id');
+    var category = '#' + $(this).parent().attr('id') + 'Number';
+    var currentNum = +$(category).val();
     setImage(categoryName, currentNum);
   });
 
