@@ -184,7 +184,7 @@
         </div>
       </div>
       <div id="back-page-1-2" class="next next-float" onclick="setSection($('#one'), $('.active'));"> RETURN </div>
-      <div class="next next-float" onclick="window.open('window.open('http://americanbonehealth.org/what-you-should-know/nutrition');"> LEARN MORE </div>
+      <div class="next next-float" onclick="window.open('http://americanbonehealth.org/what-you-should-know/nutrition');"> LEARN MORE </div>
     </section>
   </div>
 </body>
