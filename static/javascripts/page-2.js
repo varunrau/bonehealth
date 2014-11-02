@@ -18,7 +18,7 @@ function repopulatePage2() {
 $('#continue-page-2').click(function() {
   // Grab values and set cookies
   for (serving in servings) {
-    var servingValue = $('#' + serving).val();
+    var servingValue = $('#' + serving + 'Number').val();
     if (Cookies.enabled) {
       Cookies.set(serving, servingValue);
     }
@@ -27,3 +27,7 @@ $('#continue-page-2').click(function() {
   user.calcTotalServingSize();
 });
 
+$('.add-serving').click(function() {
+  var category = $(this).parent().attr('id');
+  var currentNum = $('.' + category)
+});
