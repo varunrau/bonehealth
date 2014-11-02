@@ -8,7 +8,6 @@
   -->
   <link href='https://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="favic.png"/>
   <link rel='stylesheet' href='main.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="cookies.js"></script>
@@ -193,7 +192,7 @@
     <!--<img id="about" class="nav" src="profile.svg">-->
     <div id="about-square" onclick="toggleNav()"></div>
     <div id="about-text" onclick="toggleNav()">
-      <p class="no-margin px20">This app is based on The Rule of 300, an easy way to calculate daily intake: <span class="light-blue"> Daily calcium = (# of servings of dairy / fortified juice) x 300 + 300.</span> </p>
+      <p class="no-margin px20">This app is based on The Rule of 300, an easy way to calculate daily intake: <span class="light-blue"> Daily calcium = (# of servings of dairy / fortified juice) x 300 + 300.</span> The extra 300 mg comes from a balanced diet!</p>
     </div>
     <div id="about-square-2" onclick="toggleNav()"></div>
     <img id="question" class="nav" src="question.svg" onclick="toggleNav()">
