@@ -3,6 +3,20 @@
 var servings = Object.keys(user.servings);
 
 $(document).ready(function() {
+
+  $('.up-arrow').click(function() {
+    console.log('whatsupdog');
+    var category = '#' + $(this).parent().attr('id') + 'Number';
+    var currentNum = +$(category).val();
+    $(category).val(currentNum + 1);
+  });
+
+  $('.down-arrow').click(function() {
+    var category = '#' + $(this).parent().attr('id') + 'Number';
+    var currentNum = +$(category).val();
+    $(category).val(currentNum - 1);
+  });
+
   // Repopulate fields from cookies
   repopulatePage2()
 });
@@ -28,14 +42,3 @@ $('#continue-page-2').click(function() {
   setPage3();
 });
 
-$('.add-serving').click(function() {
-  var category = '#' + $(this).parent().attr('id') + 'Number';
-  var currentNum = +$(category).val();
-  $(category).val(currentNum + 1);
-});
-
-$('.subtract-serving').click(function() {
-  var category = '#' + $(this).parent().attr('id') + 'Number';
-  var currentNum = +$(category).val();
-  $(category).val(currentNum - 1);
-});
