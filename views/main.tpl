@@ -17,6 +17,11 @@
   <script src="page-1.js"></script>
   <script src="page-3.js"></script>
   <script src="page-2.js"></script>
+  <meta property="og:url" content="http://calciumulator.herokuapp.com/"/>
+  <meta property="og:title" content="Calc(ium)ulator"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="Keep your bones healthy and your body happy!"/>
+  <meta property="og:image" content="http://calciumulator.herokuapp.com//screen-shot.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title> The Calc(ium)ulator </title>
 </head>
