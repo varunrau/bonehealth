@@ -6,6 +6,11 @@
   BLUE: 009ddc
   DARK BLUE: 0077c0
   -->
+  <meta property="og:url" content="http://calciumulator.herokuapp.com/"/>
+  <meta property="og:title" content="Calc(ium)ulator"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="Keep your bones healthy and your body happy!"/>
+  <meta property="og:image" content="http://calciumulator.herokuapp.com//screen-shot.png"/>
   <link href='https://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" type="image/png" href="favic.png">
@@ -17,11 +22,6 @@
   <script src="page-1.js"></script>
   <script src="page-3.js"></script>
   <script src="page-2.js"></script>
-  <meta property="og:url" content="http://calciumulator.herokuapp.com/"/>
-  <meta property="og:title" content="Calc(ium)ulator"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:description" content="Keep your bones healthy and your body happy!"/>
-  <meta property="og:image" content="http://calciumulator.herokuapp.com//screen-shot.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title> The Calc(ium)ulator </title>
 </head>
